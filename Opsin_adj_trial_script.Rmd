@@ -4,7 +4,7 @@ output: html_document
 date: "2026-01-26"
 ---
 
-``` {r}
+```{r}
 # load required libraries
 #Note you only need to install packages once then you can comment it out
 install.packages("dplyr")
@@ -37,7 +37,22 @@ Opsin_AEP_adjacency.NAX <- Opsin_AEP_adjacency %>%
 colnames(Opsin_AEP_adjacency.NAX)
 
 ```
+
 ```{r}
-#update
-```
+#Pull the rows with the duplicated values into a new table
+library(rbenchmark)
+library(dplyr)
+library(data.table)
+
+#create a data.frame
+df<-data.frame(
+Gene_a_id = rep(c("HVAEP1.G000061,HVAEP1.G001381,HVAEP1.G002053"),each=50),
+Gene_a_type= sample(PREDICTED: dymeclin-like [Hydra vulgaris],PREDICTED: parapinopsin-like [Hydra vulgaris]v,replace=TRUE)
+)
+duplicated_rows_base<-duplicated.data.frame(Logic)
+
+
+
+
+
 
